@@ -226,10 +226,16 @@ PublishScripts/
 *.nupkg
 # NuGet Symbol Packages
 *.snupkg
-# The packages folder can be ignored because of Package Restore
+
+# Ignore all packages by default
 **/[Pp]ackages/*
-# except build/, which is used as an MSBuild target.
+
+# Allow this specific package to be tracked
+!Microservices/KafkaWindowsChat/packages/
+!Microservices/KafkaWindowsChat/packages/librdkafka.redist.2.11.0/
+!Microservices/KafkaWindowsChat/packages/librdkafka.redist.2.11.0/**
 !**/[Pp]ackages/build/
+
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
